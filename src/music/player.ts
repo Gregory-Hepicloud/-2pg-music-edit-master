@@ -82,8 +82,11 @@ export class Player {
     return track;
   }
   private async playTrack(track: Track, seek = 0) {
+    await this.join();
 
-    this.connection.play(await ytdl(track.url), { type: 'opus' });
+    const stream = ytdl(track.url);
+
+    this.connection.play(stream, { type: "opus" })
 
     if (seek <= 0)
       emitter.emit('trackStart', this, track);
