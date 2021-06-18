@@ -1,0 +1,50 @@
+{
+  "name": "@2pg/music-edit",
+  "version": "0.0.2",
+  "description": "Discord.js music used for bobbot",
+  "main": "lib/main.js",
+  "types": "lib/main.d.ts",
+  "scripts": {
+    "test": "ts-mocha test/test.ts",
+    "demo": "ts-node-dev demo/bot.ts",
+    "docs": "typedoc --out docs src --theme docs-theme"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://twopg.github.io/music",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twopg/music.git"
+  },
+  "declaration": true,
+  "private": false,
+  "keywords": [
+    "discord",
+    "discord music",
+    "discord.js music"
+  ],
+  "prepublish": "tsc",
+  "author": "coyotefr",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "@types/yt-search": "^2.3.0",
+    "discord-ytdl-core": "^4.1.5",
+    "ffmpeg-static": "^4.2.8",
+    "yt-search": "^2.7.4",
+    "ytdl-core": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.15",
+    "@types/chai-spies": "^1.0.3",
+    "@types/mocha": "^8.2.1",
+    "chai": "^4.3.4",
+    "chai-events": "0.0.3",
+    "chai-spies": "^1.0.0",
+    "discord.js": "^12.5.1",
+    "mocha": "^8.3.2",
+    "ts-mocha": "^8.0.0",
+    "typescript": "^4.2.3"
+  }
+}
