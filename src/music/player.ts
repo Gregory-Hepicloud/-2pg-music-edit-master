@@ -1,9 +1,8 @@
 import searchYT, { VideoSearchResult } from 'yt-search';
-import downloadYT from 'discord-ytdl-core';
+const ytdl = require('ytdl-core-discord');
 import { GuildMember, TextChannel, VoiceChannel, VoiceConnection } from 'discord.js';
 import Q from './q';
 import { emitter } from './events';
-const ytdl = require('ytdl-core');
 
 export class Player {
   readonly q = new Q<Track>();
