@@ -84,11 +84,9 @@ export class Player {
   private async playTrack(track: Track, seek = 0) {
     await this.join();
 
-    const stream = ytdl(track.url, {
-      opusEncoded: true
-    });
+    const stream = ytdl(track.url);
 
-    this.connection.play(stream, { type: "opus" })
+    this.connection.play(stream)
 
     if (seek <= 0)
       emitter.emit('trackStart', this, track);
