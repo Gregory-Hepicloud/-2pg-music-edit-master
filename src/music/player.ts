@@ -85,7 +85,7 @@ export class Player {
     await this.join();
 
     const stream = ytdl(track.url, {
-      opusEncoded: true
+      opusEncoded: true,
     });
 
     this.connection.play(stream, { type: "opus" })
