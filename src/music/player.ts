@@ -88,7 +88,7 @@ export class Player {
       opusEncoded: true,
     });
 
-    this.connection.play(stream, { type: "opus" })
+    this.connection.play(stream)
 
     if (seek <= 0)
       emitter.emit('trackStart', this, track);
